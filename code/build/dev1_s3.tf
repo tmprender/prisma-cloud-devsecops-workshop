@@ -7,7 +7,9 @@ resource "aws_s3_bucket" "dev1_s3" {
   acl           = "public-read-write"
 
   tags = {
-    Environment          = "Dev"
+    Environment = "Dev"
+    yor_name    = "dev1_s3"
+    yor_trace   = "758c1b6f-d4de-4e1f-8687-e0449d9b0b07"
   }
 }
 
