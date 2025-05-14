@@ -135,9 +135,9 @@ resource "aws_vpc" "web_vpc" {
 }
 
 resource "aws_subnet" "web_subnet" {
-  vpc_id                  = aws_vpc.web_vpc.id
-  cidr_block              = "172.16.10.0/24"
-  availability_zone       = "${var.region}a"
+  vpc_id            = aws_vpc.web_vpc.id
+  cidr_block        = "172.16.10.0/24"
+  availability_zone = "${var.region}a"
 
 
   tags = {
@@ -161,7 +161,7 @@ resource "aws_subnet" "web_subnet2" {
 
 
   tags = {
-    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_commit           = "a26f7dfe89cf6f733b81a56b954720ce5cf181c7"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -179,7 +179,7 @@ resource "aws_internet_gateway" "web_igw" {
 
 
   tags = {
-    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_commit           = "a26f7dfe89cf6f733b81a56b954720ce5cf181c7"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -196,7 +196,7 @@ resource "aws_route_table" "web_rtb" {
 
 
   tags = {
-    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_commit           = "a26f7dfe89cf6f733b81a56b954720ce5cf181c7"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -233,7 +233,7 @@ resource "aws_network_interface" "web-eni" {
   private_ips = ["172.16.10.100"]
 
   tags = {
-    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_commit           = "a26f7dfe89cf6f733b81a56b954720ce5cf181c7"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -254,7 +254,7 @@ resource "aws_flow_log" "vpcflowlogs" {
 
 
   tags = {
-    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_commit           = "a26f7dfe89cf6f733b81a56b954720ce5cf181c7"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
@@ -271,7 +271,7 @@ resource "aws_s3_bucket" "flowbucket" {
   force_destroy = true
 
   tags = {
-    git_commit           = "d4c35e0270bfd542051278ca30b4b3872c1ae0b2"
+    git_commit           = "a26f7dfe89cf6f733b81a56b954720ce5cf181c7"
     git_file             = "code/deployment_ec2.tf"
     git_last_modified_at = "2024-01-26 23:01:56"
     git_last_modified_by = "tprendervill@paloaltonetworks.com"
